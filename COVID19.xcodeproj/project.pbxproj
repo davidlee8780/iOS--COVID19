@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5407DD522433ACF400075C11 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407DD512433ACF400075C11 /* SearchBar.swift */; };
 		54FBA5DF24325BCA0021FC6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5DE24325BCA0021FC6C /* AppDelegate.swift */; };
 		54FBA5E124325BCA0021FC6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5E024325BCA0021FC6C /* SceneDelegate.swift */; };
 		54FBA5E324325BCA0021FC6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5E224325BCA0021FC6C /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5407DD512433ACF400075C11 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54FBA5DB24325BCA0021FC6C /* COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FBA5DE24325BCA0021FC6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FBA5E024325BCA0021FC6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5407DD502433ACDF00075C11 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5407DD512433ACF400075C11 /* SearchBar.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		54FBA5D224325BCA0021FC6C = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		54FBA5DD24325BCA0021FC6C /* COVID19 */ = {
 			isa = PBXGroup;
 			children = (
+				5407DD502433ACDF00075C11 /* Helper */,
 				54FBA5F6243264B10021FC6C /* Network */,
 				54FBA5F5243264A90021FC6C /* Model */,
 				54FBA5F2243264140021FC6C /* Views */,
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5407DD522433ACF400075C11 /* SearchBar.swift in Sources */,
 				54FBA5F8243264C70021FC6C /* Network.swift in Sources */,
 				54FBA5DF24325BCA0021FC6C /* AppDelegate.swift in Sources */,
 				54FBA5E124325BCA0021FC6C /* SceneDelegate.swift in Sources */,

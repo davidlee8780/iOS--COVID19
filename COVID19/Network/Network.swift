@@ -29,7 +29,7 @@ class Network: ObservableObject {
             if let d = data {
                 do {
                     let lists = try jsonDecoder.decode([Country].self, from: d)
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.async {                        
                         self.countries = lists
                     }
                 } catch {
