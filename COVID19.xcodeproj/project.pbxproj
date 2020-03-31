@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		54FBA5E524325BCB0021FC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FBA5E424325BCB0021FC6C /* Assets.xcassets */; };
 		54FBA5E824325BCB0021FC6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FBA5E724325BCB0021FC6C /* Preview Assets.xcassets */; };
 		54FBA5EB24325BCB0021FC6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FBA5E924325BCB0021FC6C /* LaunchScreen.storyboard */; };
+		54FBA5F42432642D0021FC6C /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5F32432642D0021FC6C /* Country.swift */; };
+		54FBA5F8243264C70021FC6C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5F7243264C70021FC6C /* Network.swift */; };
+		54FBA5FA24327DDE0021FC6C /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5F924327DDE0021FC6C /* CountryInfo.swift */; };
+		54FBA6012433A05C0021FC6C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 54FBA6002433A05C0021FC6C /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		54FBA5E724325BCB0021FC6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54FBA5EA24325BCB0021FC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FBA5EC24325BCB0021FC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54FBA5F32432642D0021FC6C /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		54FBA5F7243264C70021FC6C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		54FBA5F924327DDE0021FC6C /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FBA6012433A05C0021FC6C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +64,11 @@
 		54FBA5DD24325BCA0021FC6C /* COVID19 */ = {
 			isa = PBXGroup;
 			children = (
+				54FBA5F6243264B10021FC6C /* Network */,
+				54FBA5F5243264A90021FC6C /* Model */,
+				54FBA5F2243264140021FC6C /* Views */,
 				54FBA5DE24325BCA0021FC6C /* AppDelegate.swift */,
 				54FBA5E024325BCA0021FC6C /* SceneDelegate.swift */,
-				54FBA5E224325BCA0021FC6C /* ContentView.swift */,
 				54FBA5E424325BCB0021FC6C /* Assets.xcassets */,
 				54FBA5E924325BCB0021FC6C /* LaunchScreen.storyboard */,
 				54FBA5EC24325BCB0021FC6C /* Info.plist */,
@@ -73,6 +83,31 @@
 				54FBA5E724325BCB0021FC6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54FBA5F2243264140021FC6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54FBA5E224325BCA0021FC6C /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		54FBA5F5243264A90021FC6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54FBA5F32432642D0021FC6C /* Country.swift */,
+				54FBA5F924327DDE0021FC6C /* CountryInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54FBA5F6243264B10021FC6C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				54FBA5F7243264C70021FC6C /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +126,9 @@
 			dependencies = (
 			);
 			name = COVID19;
+			packageProductDependencies = (
+				54FBA6002433A05C0021FC6C /* SDWebImageSwiftUI */,
+			);
 			productName = COVID19;
 			productReference = 54FBA5DB24325BCA0021FC6C /* COVID19.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 54FBA5D224325BCA0021FC6C;
+			packageReferences = (
+				54FBA5FF2433A05C0021FC6C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 54FBA5DC24325BCA0021FC6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,8 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FBA5F8243264C70021FC6C /* Network.swift in Sources */,
 				54FBA5DF24325BCA0021FC6C /* AppDelegate.swift in Sources */,
 				54FBA5E124325BCA0021FC6C /* SceneDelegate.swift in Sources */,
+				54FBA5F42432642D0021FC6C /* Country.swift in Sources */,
+				54FBA5FA24327DDE0021FC6C /* CountryInfo.swift in Sources */,
 				54FBA5E324325BCA0021FC6C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54FBA5FF2433A05C0021FC6C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54FBA6002433A05C0021FC6C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54FBA5FF2433A05C0021FC6C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54FBA5D324325BCA0021FC6C /* Project object */;
 }
