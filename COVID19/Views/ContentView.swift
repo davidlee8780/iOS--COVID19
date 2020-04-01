@@ -7,40 +7,75 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct ContentView: View {
     
-    @State private var searchText = ""
-    
-    @ObservedObject var list = Network()
-    
     var body: some View {
-        NavigationView {
-            VStack {
-                SearchBar(text: $searchText)
-                List {
-                    ForEach(list.countries.filter {
-                        self.searchText.isEmpty ? true : $0.country.lowercased().contains(self.searchText.lowercased())
-                    }, id: \.country) { country in
-                        HStack {
-                            WebImage(url: URL(string: country.countryInfo.flag))
-                                .resizable()
-                                .frame(width: 24, height: 24)
-                            Text("\(country.country) -")
-                            Text(" Casos: \(country.cases) -")
-                            Text(" Mortes: \(country.deaths)")
-                        }
-                    }
-                }
-            }
-            .navigationBarTitle(Text("COVID-19"))
-        }
+        Home()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct Home: View {
+    
+    @ObservedObject var data = Network()
+    
+    func getCases() {
+        if let dados = data.cases {
+            print(dados)
+        } else {
+            print("Vazio")
+        }
+    }
+    
+    var body: some View {
+        VStack {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 15) {
+                    VStack {
+                        Text("Date")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                            .onAppear {
+                                self.getCases()
+                        }
+                    }
+                    
+                    Text("COVID19 - Total Case".uppercased())
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                    
+                    Text("432,243")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .foregroundColor(.white)
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    //
+                }) {
+                    Image(systemName: "arrow.clockwise")
+                        .font(.title)
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 18)
+            .padding()
+            .padding(.bottom, 30)
+            .background(Color.red)
+            
+            Spacer()
+            
+            Listview()
+        }
+        .edgesIgnoringSafeArea(.top)
+        .background(Color.black.opacity(0.1).edgesIgnoringSafeArea(.all))
     }
 }

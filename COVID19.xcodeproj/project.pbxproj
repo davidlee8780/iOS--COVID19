@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5407DD522433ACF400075C11 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407DD512433ACF400075C11 /* SearchBar.swift */; };
+		5407DD562433B29900075C11 /* Listview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407DD552433B29900075C11 /* Listview.swift */; };
+		5407DD582433B75200075C11 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407DD572433B75200075C11 /* CellView.swift */; };
+		5407DD5A2433D1C300075C11 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407DD592433D1C300075C11 /* Cases.swift */; };
+		5407DD5C2434227800075C11 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407DD5B2434227800075C11 /* Extensions.swift */; };
 		54FBA5DF24325BCA0021FC6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5DE24325BCA0021FC6C /* AppDelegate.swift */; };
 		54FBA5E124325BCA0021FC6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5E024325BCA0021FC6C /* SceneDelegate.swift */; };
 		54FBA5E324325BCA0021FC6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBA5E224325BCA0021FC6C /* ContentView.swift */; };
@@ -22,6 +26,10 @@
 
 /* Begin PBXFileReference section */
 		5407DD512433ACF400075C11 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5407DD552433B29900075C11 /* Listview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listview.swift; sourceTree = "<group>"; };
+		5407DD572433B75200075C11 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		5407DD592433D1C300075C11 /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
+		5407DD5B2434227800075C11 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		54FBA5DB24325BCA0021FC6C /* COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FBA5DE24325BCA0021FC6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FBA5E024325BCA0021FC6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				5407DD512433ACF400075C11 /* SearchBar.swift */,
+				5407DD5B2434227800075C11 /* Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -100,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				54FBA5E224325BCA0021FC6C /* ContentView.swift */,
+				5407DD552433B29900075C11 /* Listview.swift */,
+				5407DD572433B75200075C11 /* CellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,6 +120,7 @@
 			children = (
 				54FBA5F32432642D0021FC6C /* Country.swift */,
 				54FBA5F924327DDE0021FC6C /* CountryInfo.swift */,
+				5407DD592433D1C300075C11 /* Cases.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,13 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5407DD562433B29900075C11 /* Listview.swift in Sources */,
 				5407DD522433ACF400075C11 /* SearchBar.swift in Sources */,
 				54FBA5F8243264C70021FC6C /* Network.swift in Sources */,
 				54FBA5DF24325BCA0021FC6C /* AppDelegate.swift in Sources */,
 				54FBA5E124325BCA0021FC6C /* SceneDelegate.swift in Sources */,
 				54FBA5F42432642D0021FC6C /* Country.swift in Sources */,
 				54FBA5FA24327DDE0021FC6C /* CountryInfo.swift in Sources */,
+				5407DD5A2433D1C300075C11 /* Cases.swift in Sources */,
 				54FBA5E324325BCA0021FC6C /* ContentView.swift in Sources */,
+				5407DD5C2434227800075C11 /* Extensions.swift in Sources */,
+				5407DD582433B75200075C11 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
